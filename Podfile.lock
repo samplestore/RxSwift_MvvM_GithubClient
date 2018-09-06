@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Himotoki (3.2.0)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxOptional (3.5.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - Spring (1.0.5)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - Himotoki
+  - RxCocoa
+  - RxOptional
+  - RxSwift
+  - SDWebImage (~> 4.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - SVProgressHUD
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: c540239f3590bbaf4a35c3959c329dd5ed4e3eee
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Himotoki: 2618fc6b939ad6d9b71c52c90fe210f54ea28167
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: fd06030bc2fdb7ef3bc5eb3d5f6dd23da9c1f132
+
+COCOAPODS: 1.4.0
