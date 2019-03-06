@@ -31,8 +31,8 @@ class GitHubService: GitHubServicing {
     
     private let network: Networking
 
-    init(){
-        network = Network();
+    init(network: Networking){
+        self.network = network
     }
     
     func userSearch(query: String) -> Observable<GitHubUserSearch> {

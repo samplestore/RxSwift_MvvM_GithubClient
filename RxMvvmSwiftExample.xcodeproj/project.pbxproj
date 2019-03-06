@@ -293,7 +293,6 @@
 				7E09F541213F9DE900DB290C /* Frameworks */,
 				7E09F542213F9DE900DB290C /* Resources */,
 				03A23B649D4F321A59887ECC /* [CP] Embed Pods Frameworks */,
-				842C6AC2883511262D406545 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,8 +311,7 @@
 				7E09F554213F9DEB00DB290C /* Sources */,
 				7E09F555213F9DEB00DB290C /* Frameworks */,
 				7E09F556213F9DEB00DB290C /* Resources */,
-				5CF81BBA32F7902507D838B6 /* [CP] Embed Pods Frameworks */,
-				E482A8A6A29FFEDD131703D4 /* [CP] Copy Pods Resources */,
+				ACA7D530C248A028A18402F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,8 +331,6 @@
 				7E09F55F213F9DEB00DB290C /* Sources */,
 				7E09F560213F9DEB00DB290C /* Frameworks */,
 				7E09F561213F9DEB00DB290C /* Resources */,
-				63494394E2627ACCA80D213E /* [CP] Embed Pods Frameworks */,
-				0BFA0D1D6813094C4C27732B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -432,6 +428,8 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -443,25 +441,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxMvvmSwiftExample/Pods-RxMvvmSwiftExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0BFA0D1D6813094C4C27732B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxMvvmSwiftExampleUITests/Pods-RxMvvmSwiftExampleUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		551B830A58192464916B9E48 /* [CP] Check Pods Manifest.lock */ = {
@@ -482,64 +467,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5CF81BBA32F7902507D838B6 /* [CP] Embed Pods Frameworks */ = {
+		ACA7D530C248A028A18402F8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxMvvmSwiftExampleTests/Pods-RxMvvmSwiftExampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxMvvmSwiftExampleTests/Pods-RxMvvmSwiftExampleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63494394E2627ACCA80D213E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxMvvmSwiftExampleUITests/Pods-RxMvvmSwiftExampleUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		842C6AC2883511262D406545 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxMvvmSwiftExample/Pods-RxMvvmSwiftExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E482A8A6A29FFEDD131703D4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxMvvmSwiftExampleTests/Pods-RxMvvmSwiftExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF4A73702C0460DA5B32DA27 /* [CP] Check Pods Manifest.lock */ = {
@@ -775,7 +724,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQFD9V79PC;
 				INFOPLIST_FILE = RxMvvmSwiftExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.mobidoo.RxMvvmSwiftExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -791,7 +743,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQFD9V79PC;
 				INFOPLIST_FILE = RxMvvmSwiftExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.mobidoo.RxMvvmSwiftExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -808,7 +763,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQFD9V79PC;
 				INFOPLIST_FILE = RxMvvmSwiftExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.mobidoo.RxMvvmSwiftExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -826,7 +785,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQFD9V79PC;
 				INFOPLIST_FILE = RxMvvmSwiftExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.mobidoo.RxMvvmSwiftExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -843,7 +806,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQFD9V79PC;
 				INFOPLIST_FILE = RxMvvmSwiftExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.mobidoo.RxMvvmSwiftExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -860,7 +827,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQFD9V79PC;
 				INFOPLIST_FILE = RxMvvmSwiftExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.mobidoo.RxMvvmSwiftExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

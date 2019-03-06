@@ -29,7 +29,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = SearchViewModel(gitHubService: GitHubService())
+        //viewModel = SearchViewModel(gitHubService: GitHubService())
         setupBinding()
     }
     

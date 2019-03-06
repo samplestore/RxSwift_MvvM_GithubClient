@@ -7,16 +7,55 @@
 //
 
 import UIKit
+import Swinject
+import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var container: Container!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // DI
+        container = Container() { container in
+            
+            //Model
+            container.register(Networking.self) { _ in
+                Network()
+            }
+            
+            container.register(GitHubServicing.self) { r in
+                GitHubService(network: r.resolve(Networking.self)!)
+            }
+            
+            // ViewModel
+            container.register(SearchViewModeling.self) { r in
+                SearchViewModel(gitHubService: r.resolve(GitHubServicing.self)!)
+            }
+            
+            //View
+            container.storyboardInitCompleted(UINavigationController.self) { _,_ in}
+            
+            container.storyboardInitCompleted(SearchViewController.self) { r,c in
+                c.viewModel = r.resolve(SearchViewModeling.self)!
+            }
+            
+            container.storyboardInitCompleted(ProfileViewController.self) { _,_ in}
+            
+        }
+        
         // Initial Screen
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.backgroundColor = UIColor.white
+        window.makeKeyAndVisible()
+        self.window = window
+        let bundle = Bundle(for: SearchViewController.self)
+        let storyboard = SwinjectStoryboard.create(name: "Main", bundle: bundle, container: container)
+        window.rootViewController = storyboard.instantiateInitialViewController()
+        
         return true
     }
 

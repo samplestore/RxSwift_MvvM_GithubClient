@@ -9,5 +9,5 @@
 import Foundation
 
 enum Keys {
-    static let GitHubAccessToken = "YOUR_API_KEY"
+    static let GitHubAccessToken = "a3b8718279a2282299796a70ef3fe6d69bb1df2b"
 }

@@ -22,11 +22,15 @@ target 'RxMvvmSwiftExample' do
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
   pod 'SDWebImage', '~> 4.0'
   
+  # DI
+  pod 'Swinject'
+  pod 'SwinjectStoryboard'
   
   # Pods for RxMvvmSwiftExample
   target 'RxMvvmSwiftExampleTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
   end
 
   target 'RxMvvmSwiftExampleUITests' do
